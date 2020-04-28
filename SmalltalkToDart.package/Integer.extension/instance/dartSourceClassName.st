@@ -1,0 +1,3 @@
+*SmalltalkToDart
+dartSourceClassName 
+^ 'int'
