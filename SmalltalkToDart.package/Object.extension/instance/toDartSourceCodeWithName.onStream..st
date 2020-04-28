@@ -2,7 +2,7 @@
 toDartSourceCodeWithName: aPropertyName onStream: aStream
 aStream
    cr;
-	nextPutAll: self className ;
+	nextPutAll: self dartSourceClassName  ;
 	space;
 	nextPutAll: aPropertyName;
 	space;
