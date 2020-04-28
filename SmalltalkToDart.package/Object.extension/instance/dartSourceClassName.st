@@ -1,3 +1,3 @@
 *SmalltalkToDart
 dartSourceClassName
-^ self subclassResponsibility 
+^ self className
