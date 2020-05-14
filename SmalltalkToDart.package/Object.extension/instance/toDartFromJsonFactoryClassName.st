@@ -1,0 +1,3 @@
+*SmalltalkToDart
+toDartFromJsonFactoryClassName
+^ self dartSourceClassName 
