@@ -1,12 +1,13 @@
 *SmalltalkToDart
 toFromJsonSourceCodeWithMap: aMapName varName: aName onStream: jsonSection
-|jsonMapStringBinding element|
-element := self at: 1.
-jsonMapStringBinding := aMapName, '["' , aName  , '"]'.
+|elementClassName|
+elementClassName := (self at: 1) dartSourceClassName .
 jsonSection cr;
 				nextPutAll: '..';
 				nextPutAll: aName;
-				nextPutAll: ' = '.
-(#(int String) includes: self dartSourceClassName ) ifTrue: [jsonSection nextPutAll: jsonMapStringBinding  ] ifFalse: [ jsonSection nextPutAll: self toDartFromJsonFactoryClassName  ; nextPutAll: '.fromJson'; nextPutAll: '('; nextPutAll: jsonMapStringBinding; nextPutAll: ')' ] 
+				nextPutAll: ' = ';
+				nextPutAll: '(', aMapName, '["' , aName  , '"]', ' as List' , ').map';
+				cr;
+				nextPutAll: '((element) => ', elementClassName, '.fromJson(element)).toList()'.
  				
 			
