@@ -1,3 +1,5 @@
 *SmalltalkToDart
 dartSourceClassName 
-^ 'List'
+|element|
+element := self at: 1.
+^ 'List<', element dartSourceClassName, '>'

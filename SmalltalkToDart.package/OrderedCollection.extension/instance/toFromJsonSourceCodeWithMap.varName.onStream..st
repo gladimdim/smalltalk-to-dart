@@ -1,6 +1,7 @@
 *SmalltalkToDart
 toFromJsonSourceCodeWithMap: aMapName varName: aName onStream: jsonSection
-|jsonMapStringBinding|
+|jsonMapStringBinding element|
+element := self at: 1.
 jsonMapStringBinding := aMapName, '["' , aName  , '"]'.
 jsonSection cr;
 				nextPutAll: '..';
